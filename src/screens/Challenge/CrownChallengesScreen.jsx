@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, FlatList, SafeAreaView, View } from 'react-native';
+import {StyleSheet, FlatList, SafeAreaView, View, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { useSelector } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
@@ -38,10 +38,8 @@ export default function CrownChallengesScreen() {
     };
 
     return (
-        <LinearGradient
-            colors={['#6B7A90', '#272C34']}
-            style={styles.gradientBackground}
-        >
+        <View style={styles.gradientBackground}>
+            <Image style={{position: 'absolute', flex: 1, width: '100%', height:'100%'}} source={require('../../assets/bg.png')} />
             <SafeAreaView style={styles.safeArea}>
                 <Header title="Crown Challenges" />
                 <TabSelector
@@ -64,7 +62,7 @@ export default function CrownChallengesScreen() {
                     }
                 />
             </SafeAreaView>
-        </LinearGradient>
+        </View>
     );
 }
 

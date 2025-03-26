@@ -56,7 +56,7 @@ export default function ChallengeCard({ item, onPress }) {
 
 const styles = StyleSheet.create({
     challengeCard: {
-        backgroundColor: '#778EAA',
+        backgroundColor: '#ffffff40',
         borderRadius: 8,
         padding: 16,
     },

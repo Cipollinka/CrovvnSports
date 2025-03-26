@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LinearGradient from 'react-native-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
@@ -34,7 +34,8 @@ export default function MainSportScreen() {
     };
 
     return (
-        <LinearGradient colors={['#6B7A90', '#272C34']} style={styles.gradientBackground}>
+        <View style={styles.gradientBackground}>
+            <Image style={{position: 'absolute', flex: 1, width: '100%', height:'100%'}} source={require('../../assets/bg.png')} />
             <SafeAreaView style={styles.safeArea}>
                 <View style={styles.container}>
                     <View style={styles.headerRow}>
@@ -72,7 +73,7 @@ export default function MainSportScreen() {
                 onSelectDate={handleSelectDate}
                 selectedDate={selectedDate}
             />
-        </LinearGradient>
+        </View>
     );
 }
 

@@ -55,7 +55,7 @@ const TabSelector = ({ selectedCategory, setSelectedCategory, labels }) => {
 
 const styles = StyleSheet.create({
     tabsContainer: {
-        backgroundColor: '#778EAA',
+        backgroundColor: '#ffffff40',
         flexDirection: 'row',
         justifyContent: 'space-around',
         marginBottom: 20,

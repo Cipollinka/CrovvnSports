@@ -4,7 +4,7 @@ import {
     Text,
     StyleSheet,
     ImageBackground,
-    TouchableOpacity,
+    TouchableOpacity, Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LinearGradient from 'react-native-linear-gradient';
@@ -17,13 +17,16 @@ import TermsSVG from '../assets/icons/settings/TermsSVG';
 export default function SettingsScreen() {
     return (
         <View style={styles.root}>
-            <LinearGradient
+            <Image
+                style={{position: 'absolute', flex: 1, width: '100%', height: '100%'}}
+                source={require('../assets/bg.png')}
+            />
+            <View
                 colors={['#6B7A90', '#272C34']}
                 style={styles.linearGradient}
             >
                 <SafeAreaView style={styles.safeArea}>
-                    <ImageBackground
-                        source={require('../assets/CrownBlurBG.png')}
+                    <View
                         style={styles.backgroundImage}
                         blurRadius={42}
                     >
@@ -50,9 +53,9 @@ export default function SettingsScreen() {
                                 <TermsSVG />
                             </TouchableOpacity>
                         </View>
-                    </ImageBackground>
+                    </View>
                 </SafeAreaView>
-            </LinearGradient>
+            </View>
         </View>
     );
 }
